@@ -58,7 +58,7 @@ class Carousel {
 // Dados de exemplo para os slides
 const slidesData = [
     {
-        imageUrl: 'images/evento1.jpg',
+        imageUrl: 'images/evento1.png',
         title: 'Workshop de IA',
         subtitle: 'Participe do nosso workshop sobre Inteligência Artificial.',
     },
@@ -68,7 +68,7 @@ const slidesData = [
         subtitle: 'Confira as atividades da semana acadêmica da Informática UFSM.',
     },
     {
-        imageUrl: 'images/evento3.jpg',
+        imageUrl: 'images/evento3.png',
         title: 'Hackathon UFSM',
         subtitle: 'Inscreva-se e mostre suas habilidades em programação.',
     },
