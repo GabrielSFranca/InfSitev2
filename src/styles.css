@@ -11,19 +11,48 @@ seletor universal */
     box-sizing: border-box;
 }
 
+
+:root {
+    /* Cores */
+    --primary-color: #0A2A66;      /* Azul Escuro */
+    --secundary-color: #FFFFFF;      /* Branco */
+ /*   --neutral-black: black;      /* Cinza Claro */
+    --accent-color: #D4AF37;       /* Dourado, opcional para acentos */
+    
+    /* Fontes */
+    --font-heading: "Amazon Ember", sans-serif;
+    --font-body: "Roboto", sans-serif;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px; /*1rem*/
 }
+
+
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+}
+
+
+/* 2) Parágrafos e texto corrido */
+p, ul, ol, dl, li {
+  font-family: var(--font-body);
+ /* color: var(--primary-color);*/
+  margin-bottom: 1em;
+}
+
 /*
 
 HEADER
 */
 
 .header-site {
-    background-color: #0A2A66;
-    color: white;
+    background-color: var(--primary-color);
+   /* color: var(--secundary-color);*/
     padding: 5px 0;
 }
 
@@ -46,6 +75,7 @@ HEADER
     align-items: center;
     font-size: 32px;
     font-weight: bold;
+    color: var(--secundary-color);
 }
 
 .main-nav ul {
@@ -63,7 +93,7 @@ HEADER
 .main-nav a {
     text-decoration: none;
     color: white;
-    font-family: "Amazon Ember", sans-serif;
+    font-family: var(--font-heading);
     font-weight: 500;
     font-size: 16px;
 }
@@ -72,6 +102,9 @@ HEADER
 .main-nav a:hover {
     text-decoration: underline;
 }
+
+
+
 
   /* ======= CARROSSEL ======= */
   .carousel-section {
@@ -155,7 +188,7 @@ HEADER
 
 /* FOOTER */
 .footer-site {
-    background-color: #0A2A66;
+    background-color: var(--primary-color);
     font-family: "Roboto", sans-serif;
     color: white;
     padding: 30px 0;

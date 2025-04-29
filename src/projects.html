@@ -18,7 +18,7 @@
         <ul>
           <li><a href="index.html">Página Inicial</a></li>
           <li><a href="about.html">Institucional</a></li>
-          <li><a href="event.html">Notícias & Eventos</a></li>
+          <li><a href="newsevent.html">Notícias & Eventos</a></li>
           <li><a href="grad.html">Graduação</a></li>
           <li><a href="posgrad.html">Pós-Graduação</a></li>
           <li><a href="projects.html">Projetos</a></li>
@@ -27,19 +27,54 @@
     </div>
   </header>
 
-  <!-- Main - Carrossel -->
-  <main>
-    <section id="carousel-section" class="carousel-section">
-      <div id="carousel" class="carousel">
-        <!-- O slide atual será injetado via TypeScript -->
-      </div>
-      <button class="carousel-prev" id="prevBtn">&#10094;</button>
-      <button class="carousel-next" id="nextBtn">&#10095;</button>
-      <div class="carousel-footer">
-         <a href="newsevent.html">Ver mais notícias</a>
-      </div>
+  <main class="container">
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Início</a></li>
+        <li>Projetos</li>
+      </ol>
+    </nav>
+
+    <!-- Grupos de Pesquisa -->
+    <section id="research-groups" class="projects-section">
+      <h1>Grupos de Pesquisa</h1>
+      <article class="project-item">
+        <h2>Laboratório de Inteligência Artificial</h2>
+        <p>Pesquisa em aprendizado de máquina, visão computacional e processamento de linguagem natural.</p>
+      </article>
+      <article class="project-item">
+        <h2>Grupo de Sistemas Distribuídos</h2>
+        <p>Estudos em computação em nuvem, IoT e arquiteturas de microsserviços.</p>
+      </article>
+    </section>
+
+    <!-- Projetos de Extensão -->
+    <section id="extension-projects" class="projects-section">
+      <h1>Projetos de Extensão</h1>
+      <ul>
+        <li>Oficinas de Robótica para Escolas Públicas</li>
+        <li>Consultoria de Software Livre para ONGs</li>
+        <li>Programa de Inclusão Digital na Comunidade</li>
+      </ul>
+    </section>
+
+    <!-- Cursos de Extensão -->
+    <section id="extension-courses" class="projects-section">
+      <h1>Cursos de Extensão</h1>
+      <ul>
+        <li>Introdução a Python</li>
+        <li>Desenvolvimento Web com React</li>
+        <li>Análise de Dados com R</li>
+      </ul>
+    </section>
+
+    <!-- Inscrições -->
+    <section id="registrations" class="projects-section">
+      <h1>Inscrições</h1>
+      <p>Para participar de qualquer projeto ou curso de extensão, preencha o <a href="forms/inscricao.html">formulário de inscrição</a>. Vagas limitadas!</p>
     </section>
   </main>
+
 
   <!-- footer -->
   <footer class="footer-site">

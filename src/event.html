@@ -18,7 +18,7 @@
         <ul>
           <li><a href="index.html">Página Inicial</a></li>
           <li><a href="about.html">Institucional</a></li>
-          <li><a href="event.html">Notícias & Eventos</a></li>
+          <li><a href="newsevent.html">Notícias & Eventos</a></li>
           <li><a href="grad.html">Graduação</a></li>
           <li><a href="posgrad.html">Pós-Graduação</a></li>
           <li><a href="projects.html">Projetos</a></li>
@@ -27,17 +27,42 @@
     </div>
   </header>
 
-  <!-- Main - Carrossel -->
-  <main>
-    <section id="carousel-section" class="carousel-section">
-      <div id="carousel" class="carousel">
-        <!-- O slide atual será injetado via TypeScript -->
-      </div>
-      <button class="carousel-prev" id="prevBtn">&#10094;</button>
-      <button class="carousel-next" id="nextBtn">&#10095;</button>
-      <div class="carousel-footer">
-         <a href="newsevent.html">Ver mais notícias</a>
-      </div>
+  <main class="container">
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Início</a></li>
+        <li>Notícias & Eventos</li>
+      </ol>
+    </nav>
+
+    <!-- Comunicados -->
+    <section id="comunicados" class="event-section">
+      <h1>Comunicados</h1>
+      <article class="news-item">
+        <h2>Prazo para matrícula prorrogado</h2>
+        <p class="date">15 de maio de 2025</p>
+        <p>O prazo para matrícula no segundo semestre foi prorrogado até 20 de maio. Confira instruções no Portal do Aluno.</p>
+      </article>
+      <article class="news-item">
+        <h2>Alteração no cronograma de aulas</h2>
+        <p class="date">10 de maio de 2025</p>
+        <p>Por motivo de manutenção, as aulas presenciais do dia 12/05 serão remotas. Fique atento ao e-mail institucional.</p>
+      </article>
+    </section>
+
+    <!-- Divulgações de Eventos -->
+    <section id="eventos" class="event-section">
+      <h1>Divulgações de Eventos</h1>
+      <article class="event-item">
+        <h2>Workshop de Inteligência Artificial</h2>
+        <p class="date">25 de maio de 2025</p>
+        <p>Inscrições abertas para o workshop de IA com laboratórios práticos. Vagas limitadas.</p>
+      </article>
+      <article class="event-item">
+        <h2>Hackathon UFSM 2025</h2>
+        <p class="date">01–03 de junho de 2025</p>
+        <p>Participe da maratona de programação e concorra a prêmios. Equipes de até 4 integrantes.</p>
+      </article>
     </section>
   </main>
 

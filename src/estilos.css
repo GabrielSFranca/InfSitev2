@@ -43,6 +43,7 @@
   
   .title {
     font-family: 'Swiss 721 Extended BT', sans-serif;
+    color: var(--secundary-color);
     font-size: 32px; /* Título aumentado */
     font-weight: bold;
   }
