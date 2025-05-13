@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de Informática - UFSM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --azul-principal: #1e3a8a;
+            --azul-secundario: #2563eb;
+            --cinza-claro: #f8fafc;
+            --cinza-texto: #4a5568;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--cinza-claro);
+            scroll-behavior: smooth;
+        }
+
+        /* Mini Header Superior */
+        .header-top {
+            background-color: var(--azul-principal);
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            gap: 25px;
+        }
+
+        .header-top a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s;
+        }
+
+        .header-top a:hover {
+            opacity: 0.8;
+        }
+
+        .language-flags {
+            display: flex;
+            gap: 10px;
+        }
+
+        .language-flags img {
+            height: 15px;
+            width: 22px;
+            border-radius: 2px;
+        }
+
+        /* Header Principal */
+        .header-main {
+            background-color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container img {
+            height: 50px;
+        }
+
+        .site-titles {
+            line-height: 1.2;
+        }
+
+        .site-title {
+            color: var(--azul-principal);
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .site-subtitle {
+            color: var(--cinza-texto);
+            font-size: 0.75rem;
+        }
+
+        .nav-main {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--azul-principal);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            color: var(--azul-secundario);
+        }
+
+        /* Carrossel */
+        .carrossel {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            background: var(--azul-principal);
+        }
+
+        .carrossel-container {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            animation: carrossel 20s infinite;
+        }
+
+        .carrossel-item {
+            width: 33.33%;
+            height: 100%;
+            padding: 40px 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .carrossel-item:nth-child(1) { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); }
+        .carrossel-item:nth-child(2) { background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%); }
+        .carrossel-item:nth-child(3) { background: linear-gradient(135deg, #1e3a8a 0%, #1a3658 100%); }
+
+        .carrossel-data {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .carrossel-titulo {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            max-width: 800px;
+        }
+
+        .carrossel-descricao {
+            font-size: 1.1rem;
+            max-width: 600px;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        @keyframes carrossel {
+            0%, 25% { transform: translateX(0); }
+            33%, 58% { transform: translateX(-33.33%); }
+            66%, 91% { transform: translateX(-66.66%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Conteúdo Principal */
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            color: var(--azul-principal);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .cursos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .curso-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .curso-titulo {
+            color: var(--azul-principal);
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-main {
+                display: none;
+            }
+
+            .header-top-content {
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 10px;
+            }
+
+            .carrossel {
+                height: 300px;
+            }
+
+            .carrossel-titulo {
+                font-size: 1.5rem;
+            }
+
+            .carrossel-descricao {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mini Header Superior -->
+    <div class="header-top">
+        <div class="header-top-content">
+            <a href="#acessibilidade">
+                <i class="fas fa-universal-access"></i>
+                Acessibilidade
+            </a>
+            <div class="language-flags">
+                <a href="#" title="Português">
+                    <img src="https://flagcdn.com/w20/br.png" alt="Bandeira Brasil">
+                </a>
+                <a href="#" title="English">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="Bandeira Reino Unido">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Principal -->
+    <header class="header-main">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="https://www.ufsm.br/app/uploads/2021/11/brasao-oficial-colorido-1.png" alt="UFSM Logo">
+                <div class="site-titles">
+                    <h1 class="site-title">Informática UFSM</h1>
+                    <p class="site-subtitle">Universidade Federal de Santa Maria</p>
+                </div>
+            </div>
+            
+            <nav class="nav-main">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#institucional" class="nav-link">Institucional</a>
+                <a href="#cursos" class="nav-link">Cursos</a>
+                <a href="#pos" class="nav-link">Pós-Graduação</a>
+                <a href="#projetos" class="nav-link">Projetos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Carrossel de Notícias/Eventos -->
+    <div class="carrossel">
+        <div class="carrossel-container">
+            <div class="carrossel-item">
+                <div class="carrossel-data">15/04/2025</div>
+                <h2 class="carrossel-titulo">Semana Acadêmica de Computação 2025</h2>
+                <p class="carrossel-descricao">Participe da maior semana acadêmica da região com palestras, workshops e competições de tecnologia.</p>
+            </div>
+            <div class="carrossel-item">
+                <div class="carrossel-data">10/04/2025</div>
+                <h2 class="carrossel-titulo">Novos Laboratórios de Inteligência Artificial</h2>
+                <p class="carrossel-descricao">Conheça nossa nova infraestrutura dedicada à pesquisa em IA e machine learning.</p>
+            </div>
+            <div class="carrossel-item">
+                <div class="carrossel-data">01/04/2025</div>
+                <h2 class="carrossel-titulo">Inscrições Abertas para Mestrado</h2>
+                <p class="carrossel-descricao">Processo seletivo para o programa de pós-graduação em Ciência da Computação.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <section id="cursos">
+            <h2 class="section-title">Nossos Cursos</h2>
+            <div class="cursos-grid">
+                <div class="curso-card">
+                    <h3 class="curso-titulo">Ciência da Computação</h3>
+                    <p>Bacharelado com ênfase em desenvolvimento de software e algoritmos.</p>
+                </div>
+                <div class="curso-card">
+                    <h3 class="curso-titulo">Sistemas de Informação</h3>
+                    <p>Formação em gestão de tecnologia da informação e sistemas empresariais.</p>
+                </div>
+                <div class="curso-card">
+                    <h3 class="curso-titulo">Engenharia de Computação</h3>
+                    <p>Integração entre hardware e software com formação em engenharia.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

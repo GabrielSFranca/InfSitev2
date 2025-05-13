@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de Informática - UFSM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://www.ufsm.br/app/uploads/2021/11/brasao-oficial-colorido-1.png" alt="UFSM Logo" class="h-12">
+                <div>
+                    <h1 class="text-xl font-bold text-blue-900">Informática UFSM</h1>
+                    <p class="text-xs text-gray-600">Universidade Federal de Santa Maria</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-blue-900 font-medium hover:text-blue-600 transition-all">Início</a>
+                <a href="#courses" class="text-blue-900 font-medium hover:text-blue-600 transition-all">Cursos</a>
+                <a href="#research" class="text-blue-900 font-medium hover:text-blue-600 transition-all">Pesquisa</a>
+                <a href="#faculty" class="text-blue-900 font-medium hover:text-blue-600 transition-all">Docentes</a>
+                <a href="#contact" class="text-blue-900 font-medium hover:text-blue-600 transition-all">Contato</a>
+            </nav>
+            
+            <button class="md:hidden text-blue-900" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="text-blue-900 font-medium hover:text-blue-600 transition-all">Início</a>
+                <a href="#courses" class="text-blue-900 font-medium hover:text-blue-600 transition-all">Cursos</a>
+                <a href="#research" class="text-blue-900 font-medium hover:text-blue-600 transition-all">Pesquisa</a>
+                <a href="#faculty" class="text-blue-900 font-medium hover:text-blue-600 transition-all">Docentes</a>
+                <a href="#contact" class="text-blue-900 font-medium hover:text-blue-600 transition-all">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Departamento de Informática</h1>
+                <p class="text-xl mb-6">Excelência em ensino, pesquisa e extensão na área de Computação</p>
+                <div class="flex space-x-4">
+                    <a href="#courses" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-all">Conheça nossos cursos</a>
+                    <a href="#contact" class="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-900 transition-all">Fale conosco</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_1280.png" alt="Computer Science Illustration" class="w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Sobre o Departamento</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <p class="text-gray-700 mb-4">
+                        O Departamento de Informática da UFSM é referência nacional no ensino e pesquisa em Computação, com mais de 30 anos de história formando profissionais qualificados e desenvolvendo pesquisas de ponta.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Nossa missão é promover o desenvolvimento científico e tecnológico na área de Computação, formando profissionais éticos, criativos e comprometidos com a solução de problemas da sociedade.
+                    </p>
+                    <p class="text-gray-700">
+                        Contamos com laboratórios modernos, professores altamente qualificados e parcerias com empresas e instituições de pesquisa nacionais e internacionais.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-6 rounded-lg text-center">
+                            <i class="fas fa-graduation-cap text-blue-600 text-4xl mb-3"></i>
+                            <h3 class="font-bold text-blue-900 mb-2">+1000</h3>
+                            <p class="text-gray-700">Alunos matriculados</p>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg text-center">
+                            <i class="fas fa-user-tie text-blue-600 text-4xl mb-3"></i>
+                            <h3 class="font-bold text-blue-900 mb-2">40+</h3>
+                            <p class="text-gray-700">Professores</p>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg text-center">
+                            <i class="fas fa-flask text-blue-600 text-4xl mb-3"></i>
+                            <h3 class="font-bold text-blue-900 mb-2">15</h3>
+                            <p class="text-gray-700">Laboratórios</p>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg text-center">
+                            <i class="fas fa-book text-blue-600 text-4xl mb-3"></i>
+                            <h3 class="font-bold text-blue-900 mb-2">5</h3>
+                            <p class="text-gray-700">Cursos oferecidos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Nossos Cursos</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all card-hover">
+                    <div class="h-48 bg-blue-600 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Ciência da Computação</h3>
+                        <p class="text-gray-600 mb-4">Bacharelado - 8 semestres - Noturno</p>
+                        <p class="text-gray-700 mb-4">Formação sólida em fundamentos da computação, algoritmos, estruturas de dados, arquitetura de computadores e desenvolvimento de software.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition-all">Saiba mais →</a>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all card-hover">
+                    <div class="h-48 bg-green-600 flex items-center justify-center">
+                        <i class="fas fa-network-wired text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Engenharia de Computação</h3>
+                        <p class="text-gray-600 mb-4">Bacharelado - 10 semestres - Integral</p>
+                        <p class="text-gray-700 mb-4">Formação interdisciplinar que combina conhecimentos de Engenharia Elétrica e Ciência da Computação para o desenvolvimento de sistemas computacionais.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition-all">Saiba mais →</a>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all card-hover">
+                    <div class="h-48 bg-purple-600 flex items-center justify-center">
+                        <i class="fas fa-database text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Sistemas de Informação</h3>
+                        <p class="text-gray-600 mb-4">Bacharelado - 8 semestres - Noturno</p>
+                        <p class="text-gray-700 mb-4">Foco na gestão da informação e tecnologia em organizações, com ênfase em sistemas empresariais, banco de dados e gestão de TI.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition-all">Saiba mais →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">Ver todos os cursos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Pesquisa e Inovação</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-blue-50 p-8 rounded-lg transition-all card-hover">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-brain text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Inteligência Artificial</h3>
+                    <p class="text-gray-700">Pesquisas em machine learning, processamento de linguagem natural, visão computacional e sistemas inteligentes.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-8 rounded-lg transition-all card-hover">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-shield-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Segurança da Informação</h3>
+                    <p class="text-gray-700">Desenvolvimento de técnicas e ferramentas para proteção de sistemas, criptografia e análise de vulnerabilidades.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-8 rounded-lg transition-all card-hover">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-project-diagram text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Redes de Computadores</h3>
+                    <p class="text-gray-700">Pesquisas em arquiteturas de redes, protocolos, Internet das Coisas (IoT) e computação em nuvem.</p>
+                </div>
+            </div>
+            
+            <div class="bg-blue-900 text-white rounded-xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0 md:pr-8">
+                        <h3 class="text-2xl font-bold mb-4">Participe de nossos grupos de pesquisa</h3>
+                        <p class="mb-4">Nossos grupos de pesquisa estão abertos à participação de alunos de graduação e pós-graduação, com oportunidades de bolsas e desenvolvimento de projetos inovadores.</p>
+                        <a href="#" class="inline-block bg-white text-blue-900 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition-all">Conheça os grupos</a>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <img src="https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg" alt="Research Illustration" class="w-full max-w-xs rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Corpo Docente</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-700 max-w-2xl mx-auto mt-4">Nossos professores possuem formação em instituições de excelência no Brasil e no exterior, com vasta experiência acadêmica e profissional.</p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Professor 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all card-hover">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-circle text-gray-400 text-8xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-blue-900">Prof. Dr. João Silva</h3>
+                        <p class="text-gray-600 text-sm mb-2">Doutor em Ciência da Computação - USP</p>
+                        <p class="text-gray-700 text-sm">Áreas: Inteligência Artificial, Machine Learning</p>
+                    </div>
+                </div>
+                
+                <!-- Professor 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all card-hover">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-circle text-gray-400 text-8xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-blue-900">Profa. Dra. Maria Oliveira</h3>
+                        <p class="text-gray-600 text-sm mb-2">Doutora em Engenharia Elétrica - UFMG</p>
+                        <p class="text-gray-700 text-sm">Áreas: Redes de Computadores, IoT</p>
+                    </div>
+                </div>
+                
+                <!-- Professor 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all card-hover">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-circle text-gray-400 text-8xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-blue-900">Prof. Dr. Carlos Pereira</h3>
+                        <p class="text-gray-600 text-sm mb-2">Doutor em Ciência da Computação - MIT</p>
+                        <p class="text-gray-700 text-sm">Áreas: Segurança da Informação, Criptografia</p>
+                    </div>
+                </div>
+                
+                <!-- Professor 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all card-hover">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-circle text-gray-400 text-8xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-blue-900">Profa. Dra. Ana Santos</h3>
+                        <p class="text-gray-600 text-sm mb-2">Doutora em Sistemas de Informação - UFRGS</p>
+                        <p class="text-gray-700 text-sm">Áreas: Banco de Dados, Big Data</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">Ver todos os docentes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Entre em Contato</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Informações de Contato</h3>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-start mb-4">
+                            <div class="text-blue-600 mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Endereço</h4>
+                                <p class="text-gray-700">Av. Roraima, 1000 - Prédio 7 - Sala 305<br>Camobi, Santa Maria - RS<br>CEP: 97105-900</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="text-blue-600 mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Telefone</h4>
+                                <p class="text-gray-700">(55) 3220-8000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="text-blue-600 mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <p class="text-gray-700">contato@inf.ufsm.br</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Horário de Atendimento</h3>
+                    <p class="text-gray-700 mb-2"><span class="font-medium">Segunda a sexta:</span> 8h às 12h e 13h30 às 17h30</p>
+                    <p class="text-gray-700"><span class="font-medium">Sábados, domingos e feriados:</span> Fechado</p>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                            <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Selecione um assunto</option>
+                                <option value="admission">Processo Seletivo</option>
+                                <option value="course">Informações sobre Cursos</option>
+                                <option value="research">Pesquisa e Inovação</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="bg-gray-100">
+        <div class="container mx-auto px-4 py-8">
+            <h3 class="text-xl font-bold text-blue-900 mb-4 text-center">Localização</h3>
+            <div class="h-96 w-full bg-gray-300 rounded-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.215888240318!2d-53.71351572437031!3d-29.71722042481328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503b59977847109%3A0x5a9a5a9a5a9a5a9a!2sUFSM%20-%20Universidade%20Federal%20de%20Santa%20Maria!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Informática UFSM</h3>
+                    <p class="mb-4">Departamento de Informática da Universidade Federal de Santa Maria, referência em ensino, pesquisa e extensão na área de Computação.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-blue-200 transition-all"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200 transition-all"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200 transition-all"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200 transition-all"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200 transition-all"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-200 transition-all">Portal UFSM</a></li>
+                        <li><a href="#" class="hover:text-blue-200 transition-all">Biblioteca</a></li>
+                        <li><a href="#" class="hover:text-blue-200 transition-all">Calendário Acadêmico</a></li>
+                        <li><a href="#" class="hover:text-blue-200 transition-all">Editais</a></li>
+                        <li><a href="#" class="hover:text-blue-200 transition-all">Documentos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Cursos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-200 transition-all">Ciência da Computação</a></li>
+                        <li><a href="#" class="hover:text-blue-200 transition-all">Engenharia de Computação</a></li>
+                        <li><a href="#" class="hover:text-blue-200 transition-all">Sistemas de Informação</a></li>
+                        <li><a href="#" class="hover:text-blue-200 transition-all">Mestrado em Computação</a></li>
+                        <li><a href="#" class="hover:text-blue-200 transition-all">Doutorado em Computação</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="mb-4">Assine nossa newsletter para receber as últimas notícias e eventos do departamento.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu email" class="px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none w-full">
+                        <button type="submit" class="bg-blue-600 px-4 py-2 rounded-r-lg hover:bg-blue-700 transition-all"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-200">
+                <p>&copy; 2023 Departamento de Informática - UFSM. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition-all hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

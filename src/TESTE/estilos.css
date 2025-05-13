@@ -1,0 +1,150 @@
+/* imports de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/bfb17d660711f0ed0208c013da853a32?family=Swiss+721+Extended+BT');
+@import url('https://fonts.cdnfonts.com/css/amazon-ember');
+
+/* reset de formatação do HTML
+seletor universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* styles.css */
+:root {
+    --primary-color: #0A2A66;
+    --secondary-color: #FFFFFF;
+    --accent-color: #D4AF37;
+    --font-heading: "Amazon Ember", sans-serif;
+    --font-body: "Roboto", sans-serif;
+}
+
+/* Top Header */
+.header-top {
+    background-color: var(--primary-color);
+    padding: 8px 0;
+}
+
+.header-top-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.language-flags img {
+    height: 15px;
+    margin-left: 10px;
+}
+
+/* Main Header */
+.header-site {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.title {
+    color: var(--secondary-color);
+    font-family: "Swiss 721 Extended BT";
+    font-size: 32px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.main-nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-family: var(--font-heading);
+}
+
+/* Carrossel */
+.carousel-section {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    max-width: 600px;
+}
+
+/* Institucional */
+.institutional-section {
+    padding: 50px 0;
+}
+
+.institutional-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.institutional-content h3 {
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.location-section {
+    margin-top: 50px;
+}
+
+.map-container {
+    height: 400px;
+    background: #f0f0f0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+    }
+    
+    .institutional-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .slide-info {
+        max-width: 100%;
+        left: 0;
+        right: 0;
+    }
+}
