@@ -15,7 +15,13 @@
             --azul-secundario: #1a4b8c;
             --cinza-claro: #f8fafc;
             --cinza-texto: #4a5568;
-            --dourado: #D4AF37;
+            --dourado: #0FC1B7;
+            --cinza-escuro: #3A3A3A;
+
+            /*
+              --ufsm-teal-neon: #78DFEA;  D4AF37;
+
+            */
             /* Fontes */
             --font-heading: "Amazon Ember", sans-serif;
             --font-body: "Roboto", sans-serif;
@@ -124,11 +130,11 @@
         .nav-link {
             color: var(--azul-principal);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: color 0.3s;
-            font-size: 0.95rem;
-            font-family: var(--font-heading);
-            text-transform: uppercase;
+            font-size: 0.96rem;
+            font-family: "Swiss 721 Extended BT", sans-serif;
+            /*text-transform: uppercase;*/
         }
 
         .nav-link:hover {
@@ -164,7 +170,7 @@
         }
 
         .carrossel-item:nth-child(1) { 
-            background: linear-gradient(rgba(10, 42, 102, 0.8), rgba(10, 42, 102, 0.8)), 
+            background: linear-gradient(#0a2a66cc, rgba(10, 42, 102, 0.8)), 
                         url('https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849822_1280.jpg');
         }
         .carrossel-item:nth-child(2) { 
@@ -205,13 +211,13 @@
         }
 
         .carrossel-link {
-            color: white;
+            color: var(--cinza-escuro);
             text-decoration: none;
             font-weight: 500;
             display: inline-block;
             padding: 10px 20px;
             background-color: var(--dourado);
-            border-radius: 4px;
+            /*border-radius: 4px;*/
             transition: background-color 0.3s;
         }
 
@@ -270,7 +276,7 @@
             color: var(--azul-principal);
             margin-bottom: 15px;
             font-size: 1.5rem;
-            font-family: "Swiss 721 Extended BT", sans-serif;
+            font-family: var(--font-heading);
         }
 
         .institutional-numbers {
@@ -349,7 +355,8 @@
             color: var(--azul-principal);
             font-size: 1.5rem;
             margin-bottom: 10px;
-            font-family: "Swiss 721 Extended BT", sans-serif;
+            font-family: var(--font-heading);
+            /*font-family: "Swiss 721 Extended BT", sans-serif;*/
         }
 
         .course-meta {
@@ -376,7 +383,7 @@
             color: var(--azul-principal);
             font-size: 1.8rem;
             margin-bottom: 20px;
-            font-family: "Swiss 721 Extended BT", sans-serif;
+            font-family: var(--font-heading);
         }
 
         .postgrad-card ul {
@@ -406,7 +413,7 @@
             color: var(--azul-principal);
             font-size: 1.5rem;
             margin-bottom: 15px;
-            font-family: "Swiss 721 Extended BT", sans-serif;
+            font-family: var(--font-heading);
         }
 
         /* Footer */

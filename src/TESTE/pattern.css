@@ -1,0 +1,86 @@
+/* 1) Defina fonte padrão para todo o documento */
+html {
+  font-family: var(--font-body);    /* corpo de texto padrão */
+  color: var(--primary-color);       /* cor principal do texto */
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+/* 2) Cabeçalhos usam fonte de destaque */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+}
+
+/* 3) Links em todo o site */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* 4) Botões e elementos de destaque */
+button, .btn {
+  font-family: var(--font-body);
+  background-color: var(--primary-color);
+  color: var(--neutral-white);
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+button:hover, .btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* 5) Texto de parágrafos e listas */
+p, ul, ol, dl, li {
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+/* 6) Breadcrumb e pequenos textos */
+.breadcrumb, .date, .footer-copy {
+  font-size: 0.875em;
+  color: var(--neutral-light);
+}
+
+/* 7) Inputs e formulários */
+input, select, textarea {
+  font-family: var(--font-body);
+  border: 1px solid var(--neutral-light);
+  padding: 0.5em;
+  width: 100%;
+}
+
+/* 8) Garante que header/footer herdem a fonte padrão */
+.site-header, .footer-site {
+  font-family: var(--font-body);
+}
+
+
+/*
+:root {
+  /* Fontes */
+  --font-heading: 'Amazon Ember', sans-serif;   /* agora heading usa Amazon Ember */
+  --font-body: 'Roboto', sans-serif;            /* corpo de texto usa Roboto */
+}
+
+/* 1) Cabeçalhos em todo o site */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+}
+
+/* 2) Parágrafos e texto corrido */
+p, ul, ol, dl, li {
+  font-family: var(--font-body);
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+*/
